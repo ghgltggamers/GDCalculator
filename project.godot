@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="GDCalculator"
+config/description="GDCalculator is a simple yet usefull application written by ghgltggamer and developed in Godot Open Source Game Engine 3. The main moive behind this project was to promote the OpenSource Community and Help the Developers to add an advanced Calculator feature in there Projects. This is a fully Open Source Project made with intel celeron based old laptop with 4gb ddr3 ram on ubuntu desktop with Godot Game Engine 3."
+run/main_scene="res://scenes/Main.tscn"
+boot_splash/image="res://app_icon.png"
+boot_splash/bg_color=Color( 0.87451, 0.87451, 0.87451, 1 )
+config/icon="res://app_icon.png"
+config/macos_native_icon="res://icon/app_icon.icns"
+config/windows_native_icon="res://icon/app_icon.ico"
+
+[display]
+
+window/size/height=641
+window/size/resizable=false
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

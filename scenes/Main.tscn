@@ -1,0 +1,566 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://graphics/inputvalue.tres" type="StyleBox" id=1]
+[ext_resource path="res://graphics/fonts/Quicksand_Light.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://programs/Main.gd" type="Script" id=3]
+[ext_resource path="res://graphics/image/Screenshot from 2024-08-11 18-00-19.png" type="Texture" id=4]
+[ext_resource path="res://graphics/image/290303037-0612e088-0394-421d-9266-2f6e1d12498e.png" type="Texture" id=5]
+[ext_resource path="res://graphics/image/image7.jpg" type="Texture" id=6]
+[ext_resource path="res://graphics/image/Godot_logo.svg" type="Texture" id=7]
+[ext_resource path="res://graphics/image/211751_gear_icon.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 1600, 753 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.952941, 0.94902, 0.94902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.952941, 0.94902, 0.94902, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.454902, 0.454902, 0.454902, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.0431373, 0.388235, 0.984314, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0431373, 0.388235, 0.984314, 1 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="resource" type="Control" parent="."]
+margin_right = 1023.0
+margin_bottom = 651.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="ColorRect" parent="resource"]
+margin_right = 1024.0
+margin_bottom = 650.0
+color = Color( 0.952941, 0.952941, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="values" type="LineEdit" parent="resource"]
+margin_left = 25.0
+margin_top = 18.0
+margin_right = 322.0
+margin_bottom = 87.0
+custom_styles/normal = ExtResource( 1 )
+custom_colors/font_color_selected = Color( 0.137255, 0.133333, 0.133333, 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+placeholder_text = "Enter the values"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keypad" type="Control" parent="resource"]
+margin_right = 347.0
+margin_bottom = 641.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="indicators" type="Control" parent="resource/keypad"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="keypress_indicator_red" type="ColorRect" parent="resource/keypad/indicators"]
+margin_left = 283.888
+margin_top = 115.27
+margin_right = 296.888
+margin_bottom = 128.27
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keypress_indicator_red2" type="ColorRect" parent="resource/keypad/indicators"]
+visible = false
+margin_left = 283.888
+margin_top = 115.27
+margin_right = 296.888
+margin_bottom = 128.27
+color = Color( 0.360784, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keypress_indicator_red3" type="ColorRect" parent="resource/keypad/indicators"]
+visible = false
+margin_left = 283.888
+margin_top = 115.27
+margin_right = 296.888
+margin_bottom = 128.27
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="keypress_indicator_red4" type="ColorRect" parent="resource/keypad/indicators"]
+visible = false
+margin_left = 283.888
+margin_top = 115.27
+margin_right = 296.888
+margin_bottom = 128.27
+color = Color( 0.945098, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="numpad" type="Control" parent="resource/keypad"]
+margin_left = -1.33484
+margin_top = -68.0768
+margin_right = 344.665
+margin_bottom = 530.923
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Button" parent="resource/keypad/numpad"]
+margin_left = 24.9812
+margin_top = 436.033
+margin_right = 112.981
+margin_bottom = 520.033
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Button" parent="resource/keypad/numpad"]
+margin_left = 130.434
+margin_top = 434.698
+margin_right = 218.434
+margin_bottom = 518.698
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Button" parent="resource/keypad/numpad"]
+margin_left = 233.895
+margin_top = 434.698
+margin_right = 321.895
+margin_bottom = 518.698
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Button" parent="resource/keypad/numpad"]
+margin_left = 24.9812
+margin_top = 332.572
+margin_right = 112.981
+margin_bottom = 416.572
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Button" parent="resource/keypad/numpad"]
+margin_left = 130.434
+margin_top = 331.237
+margin_right = 218.434
+margin_bottom = 415.237
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Button" parent="resource/keypad/numpad"]
+margin_left = 233.895
+margin_top = 331.237
+margin_right = 321.895
+margin_bottom = 415.237
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="Button" parent="resource/keypad/numpad"]
+margin_left = 24.9812
+margin_top = 229.111
+margin_right = 112.981
+margin_bottom = 313.111
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="8" type="Button" parent="resource/keypad/numpad"]
+margin_left = 130.434
+margin_top = 227.776
+margin_right = 218.434
+margin_bottom = 311.776
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="9" type="Button" parent="resource/keypad/numpad"]
+margin_left = 233.895
+margin_top = 227.776
+margin_right = 321.895
+margin_bottom = 311.776
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Button" parent="resource/keypad/numpad"]
+margin_left = 27.5011
+margin_top = 539.052
+margin_right = 115.501
+margin_bottom = 623.052
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="add" type="Button" parent="resource/keypad/numpad"]
+margin_left = 132.953
+margin_top = 537.717
+margin_right = 220.954
+margin_bottom = 621.717
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sub" type="Button" parent="resource/keypad/numpad"]
+margin_left = 236.414
+margin_top = 537.717
+margin_right = 324.414
+margin_bottom = 621.717
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mul" type="Button" parent="resource/keypad/numpad"]
+margin_left = 31.5507
+margin_top = 647.448
+margin_right = 119.551
+margin_bottom = 698.448
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="div" type="Button" parent="resource/keypad/numpad"]
+margin_left = 137.551
+margin_top = 646.448
+margin_right = 225.551
+margin_bottom = 697.448
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="c" type="Button" parent="resource/keypad/numpad"]
+margin_left = 27.7751
+margin_top = 166.072
+margin_right = 115.775
+margin_bottom = 217.072
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="equal" type="Button" parent="resource/keypad/numpad"]
+margin_left = 133.775
+margin_top = 165.072
+margin_right = 221.775
+margin_bottom = 216.072
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mod" type="Button" parent="resource/keypad/numpad"]
+margin_left = 241.0
+margin_top = 646.0
+margin_right = 321.0
+margin_bottom = 697.0
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "r"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Project-meta" type="Control" parent="resource"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="opensource" type="Sprite" parent="resource/Project-meta"]
+position = Vector2( 615.527, 256.343 )
+scale = Vector2( 3.61538, 3.84932 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="resource/Project-meta"]
+margin_left = 477.909
+margin_top = 44.409
+margin_right = 763.909
+margin_bottom = 156.409
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "Open Source"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="resource/Project-meta"]
+margin_left = 450.97
+margin_top = 423.562
+margin_right = 744.97
+margin_bottom = 574.562
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.294118, 0.294118, 0.294118, 1 )
+text = "Written by ghgltggamer
+
+Source : 
+
+Engine :
+ 
+YouTube : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="github" type="Sprite" parent="resource/Project-meta"]
+position = Vector2( 597.576, 472.722 )
+scale = Vector2( 0.0607535, 0.0495142 )
+texture = ExtResource( 5 )
+
+[node name="github-btn" type="LinkButton" parent="resource/Project-meta/github"]
+margin_left = -800.0
+margin_top = -378.0
+margin_right = 800.0
+margin_bottom = 374.0
+custom_styles/focus = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="engine" type="Sprite" parent="resource/Project-meta"]
+position = Vector2( 594.982, 515.419 )
+scale = Vector2( 0.0881574, 0.086794 )
+texture = ExtResource( 7 )
+
+[node name="engine-btn" type="LinkButton" parent="resource/Project-meta/engine"]
+margin_left = -511.0
+margin_top = -214.0
+margin_right = 592.0
+margin_bottom = 186.0
+custom_styles/focus = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="youtube" type="Sprite" parent="resource/Project-meta"]
+position = Vector2( 596.226, 559.553 )
+scale = Vector2( 0.13298, 0.101498 )
+texture = ExtResource( 6 )
+
+[node name="youtube-btn" type="LinkButton" parent="resource/Project-meta/youtube"]
+margin_left = -250.0
+margin_top = -153.0
+margin_right = 250.0
+margin_bottom = 154.0
+custom_styles/focus = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Control" parent="resource"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="settings-bg" type="ColorRect" parent="resource/Settings"]
+margin_left = 810.0
+margin_top = 116.0
+margin_right = 1014.0
+margin_bottom = 574.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="resource/Settings/settings-bg"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 196.0
+margin_bottom = 433.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+text = "General
+
+Name: GDCalculator
+Author: ghgltggamer
+Compainy: fozdtxcorp
+Engine: Godot Engine3
+Programming: GDScript
+
+
+Version
+
+Version: v1.0
+Version name: LumKit
+Version Tag: v-1-0
+Version Logs: No logs
+
+
+License
+
+License: MIT License
+Theme: Light
+License FIle: LICENSE.txt"
+
+[node name="close-settings" type="Button" parent="resource/Settings"]
+margin_left = 985.0
+margin_top = 545.0
+margin_right = 1011.0
+margin_bottom = 570.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 8 )
+custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_colors/font_color_hover = Color( 0.109804, 0.109804, 0.109804, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="green-lit-timeout" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="settings" type="Sprite" parent="."]
+position = Vector2( 929.584, 59.4826 )
+scale = Vector2( 0.133791, 0.136718 )
+texture = ExtResource( 8 )
+
+[node name="settings-button" type="Button" parent="settings"]
+margin_left = -211.061
+margin_top = -204.689
+margin_right = 219.939
+margin_bottom = 212.311
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="resource/keypad/numpad/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/sub" to="." method="_on_sub_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/mul" to="." method="_on_mul_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/div" to="." method="_on_div_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/c" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/equal" to="." method="_on_equal_pressed"]
+[connection signal="pressed" from="resource/keypad/numpad/mod" to="." method="_on_mod_pressed"]
+[connection signal="pressed" from="resource/Project-meta/github/github-btn" to="." method="_on_LinkButton_github_pressed"]
+[connection signal="pressed" from="resource/Project-meta/engine/engine-btn" to="." method="_on_enginebtn_link_pressed"]
+[connection signal="pressed" from="resource/Project-meta/youtube/youtube-btn" to="." method="_on_youtubebtn_link_pressed"]
+[connection signal="pressed" from="resource/Settings/close-settings" to="." method="_on_closesettings_pressed"]
+[connection signal="timeout" from="green-lit-timeout" to="." method="_on_greenlittimeout_timeout"]
+[connection signal="pressed" from="settings/settings-button" to="." method="_on_settingsbutton_pressed"]
