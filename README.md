@@ -45,6 +45,9 @@ This file is simply a meta file for godot game engine which tells the engine abo
 ## app_icon.png
 This is the application icon file which sets the default application icon for godot engine and exportings.
 
+## LICENSE
+This file is simply the license file which contains the MIT License with it.
+
 ---------------------------------------I hope this was a decent Readme file which can tell most of the things about project----------------------------
 
 
